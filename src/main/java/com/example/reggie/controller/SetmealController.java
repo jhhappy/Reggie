@@ -47,7 +47,7 @@ public class SetmealController {
      * @return
      */
     @PostMapping
- //   @CacheEvict(value = "setmealCache",allEntries = true) //清理setmealCache缓存中的所有数据
+    @CacheEvict(value = "setmealCache",allEntries = true) //清理setmealCache缓存中的所有数据
     public R<String> save(@RequestBody SetmealDto setmealDto){
         log.info("套餐信息；{}",setmealDto);
         setmealService.saveWithDish(setmealDto);
